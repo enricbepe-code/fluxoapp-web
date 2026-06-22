@@ -30,25 +30,9 @@ export default function Hero() {
       />
 
       <div className="relative max-w-4xl mx-auto text-center">
-        {/* Logo visible in hero on mobile (navbar is transparent) */}
+        {/* Logo visible in hero */}
         <div className="flex justify-center mb-10">
-          <span className="inline-flex items-center gap-2 select-none">
-            <svg
-              width="44"
-              height="44"
-              viewBox="0 0 36 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <circle cx="18" cy="18" r="18" fill="#2470b8" />
-              <path d="M18 8 A10 10 0 0 1 28 18" stroke="white" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-              <polygon points="28,14 28,22 33,18" fill="white" />
-              <path d="M18 28 A10 10 0 0 1 8 18" stroke="#16b882" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-              <polygon points="8,22 8,14 3,18" fill="#16b882" />
-            </svg>
-            <span className="text-3xl font-bold tracking-tight text-white">Fluxoapp</span>
-          </span>
+          <Logo size="lg" />
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 tracking-tight">
