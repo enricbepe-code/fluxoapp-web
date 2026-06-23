@@ -67,12 +67,7 @@ export default function Hero() {
           color: '#ffffff', margin: '0 0 1.5rem',
         }}>
           Tu negocio,{' '}
-          <span style={{
-            background: 'linear-gradient(90deg, #A78BFA, #F5C842)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}>
+          <span style={{ color: '#F5C842' }}>
             sin interrupciones
           </span>
         </h1>
