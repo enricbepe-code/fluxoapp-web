@@ -16,14 +16,14 @@ function GearIcon({ size, color }) {
   )
 }
 
-export default function Logo({ size = 'md', light = false }) {
+export default function Logo({ size = 'md' }) {
   const configs = {
     sm: { fontSize: 18, gear: 18 },
     md: { fontSize: 24, gear: 24 },
     lg: { fontSize: 48, gear: 44 },
   }
   const c = configs[size]
-  const color = light ? '#ffffff' : BRAND
+  const color = '#ffffff'
 
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, userSelect: 'none' }}>

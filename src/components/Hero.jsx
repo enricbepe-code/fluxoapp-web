@@ -38,7 +38,7 @@ export default function Hero() {
       <div style={{ position: 'relative', maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
         {/* Logo */}
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 40 }}>
-          <Logo size="lg" light />
+          <Logo size="lg" />
         </div>
 
         {/* Badge */}

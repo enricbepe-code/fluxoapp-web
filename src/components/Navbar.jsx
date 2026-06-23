@@ -15,11 +15,11 @@ export default function Navbar() {
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
         transition: 'all 0.3s cubic-bezier(0.16,1,0.3,1)',
-        background: scrolled ? 'rgba(255,255,255,0.92)' : 'transparent',
+        background: scrolled ? 'rgba(26,26,46,0.92)' : 'transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(108,63,199,0.1)' : '1px solid transparent',
-        boxShadow: scrolled ? '0 1px 3px rgba(0,0,0,0.06)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.07)' : '1px solid transparent',
+        boxShadow: scrolled ? '0 2px 16px rgba(0,0,0,0.3)' : 'none',
       }}
     >
       <nav
