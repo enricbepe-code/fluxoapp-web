@@ -60,7 +60,7 @@ export default function Hero() {
         </div>
 
         <h1 style={{
-          fontFamily: "'Syne', sans-serif",
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontSize: 'clamp(2.4rem, 6vw, 4rem)',
           fontWeight: 800, lineHeight: 1.05,
           letterSpacing: '-0.03em',

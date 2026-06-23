@@ -46,7 +46,7 @@ export default function HowItWorks() {
             Proceso
           </span>
           <h2 style={{
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
             fontWeight: 800, lineHeight: 1.1,
             letterSpacing: '-0.02em',
@@ -82,14 +82,14 @@ export default function HowItWorks() {
                   marginBottom: 24, position: 'relative', zIndex: 1,
                 }}>
                   <span style={{
-                    fontFamily: "'Syne', sans-serif",
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
                     fontSize: 28, fontWeight: 800, color: '#ffffff',
                   }}>
                     {step.num}
                   </span>
                 </div>
                 <h3 style={{
-                  fontFamily: "'Syne', sans-serif", fontSize: 18, fontWeight: 700,
+                  fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 18, fontWeight: 700,
                   color: '#ffffff', margin: '0 0 12px', lineHeight: 1.25,
                 }}>
                   {step.title}

@@ -71,7 +71,7 @@ export default function Solution() {
             Servicios
           </span>
           <h2 style={{
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
             fontWeight: 800, lineHeight: 1.1,
             letterSpacing: '-0.02em',
@@ -123,7 +123,7 @@ export default function Solution() {
                 {s.icon}
               </div>
               <h3 style={{
-                fontFamily: "'Syne', sans-serif", fontSize: 18, fontWeight: 700,
+                fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 18, fontWeight: 700,
                 color: '#1A1A2E', margin: '0 0 8px',
               }}>
                 {s.title}

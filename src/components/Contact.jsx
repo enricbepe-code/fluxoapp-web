@@ -14,7 +14,7 @@ export default function Contact() {
             Contacto
           </span>
           <h2 style={{
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: 'clamp(2rem, 5vw, 3rem)',
             fontWeight: 800, lineHeight: 1.05,
             letterSpacing: '-0.03em',

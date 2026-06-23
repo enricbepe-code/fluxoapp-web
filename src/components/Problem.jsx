@@ -39,7 +39,7 @@ export default function Problem() {
             El problema
           </span>
           <h2 style={{
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
             fontWeight: 800, lineHeight: 1.1,
             letterSpacing: '-0.02em',
