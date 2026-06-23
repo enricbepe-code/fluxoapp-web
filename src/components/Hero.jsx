@@ -109,7 +109,7 @@ export default function Hero() {
             Hablemos
           </a>
           <a
-            href="https://peludetsnets.fluxoapp.es"
+            href="https://peludets-app.vercel.app/dashboard"
             target="_blank"
             rel="noopener noreferrer"
             style={{
