@@ -1,12 +1,12 @@
 const BRAND = '#6C3FC7'
 
-function GearIcon({ size }) {
+function GearIcon({ size, color }) {
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      fill={BRAND}
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       style={{ flexShrink: 0 }}
@@ -26,31 +26,18 @@ export default function Logo({ size = 'md', light = false }) {
   const color = light ? '#ffffff' : BRAND
 
   return (
-    <span
-      className="inline-flex items-center select-none"
-      style={{ gap: 4 }}
-    >
-      <span
-        style={{
-          fontWeight: 500,
-          fontSize: c.fontSize,
-          color,
-          lineHeight: 1,
-          fontFamily: 'Inter, system-ui, sans-serif',
-        }}
-      >
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, userSelect: 'none' }}>
+      <span style={{
+        fontWeight: 500, fontSize: c.fontSize, color,
+        lineHeight: 1, fontFamily: "'Inter', system-ui, sans-serif",
+      }}>
         flux
       </span>
-      <GearIcon size={c.gear} style={{ color }} />
-      <span
-        style={{
-          fontWeight: 500,
-          fontSize: c.fontSize,
-          color,
-          lineHeight: 1,
-          fontFamily: 'Inter, system-ui, sans-serif',
-        }}
-      >
+      <GearIcon size={c.gear} color={color} />
+      <span style={{
+        fontWeight: 500, fontSize: c.fontSize, color,
+        lineHeight: 1, fontFamily: "'Inter', system-ui, sans-serif",
+      }}>
         app
       </span>
     </span>

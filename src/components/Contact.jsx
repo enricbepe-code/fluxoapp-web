@@ -4,16 +4,29 @@ export default function Contact() {
   const ref = useFadeIn()
 
   return (
-    <section ref={ref} id="contacto" className="py-20 sm:py-28 bg-white px-4">
-      <div className="max-w-2xl mx-auto text-center">
+    <section ref={ref} id="contacto" style={{
+      padding: '5rem 1rem',
+      background: '#ffffff',
+    }}>
+      <div style={{ maxWidth: 680, margin: '0 auto', textAlign: 'center' }}>
         <div className="fade-in">
-          <span className="inline-block text-blue-700 font-semibold text-sm uppercase tracking-widest mb-3">
+          <span className="label-overline" style={{ display: 'block', marginBottom: 12 }}>
             Contacto
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+          <h2 style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontWeight: 800, lineHeight: 1.05,
+            letterSpacing: '-0.03em',
+            color: '#1A1A2E', margin: '0 0 1rem',
+          }}>
             ¿Hablamos?
           </h2>
-          <p className="text-slate-500 text-lg mb-10 leading-relaxed">
+          <p style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: 18, lineHeight: 1.65,
+            color: '#8A8680', margin: '0 0 2.5rem',
+          }}>
             Sin compromiso. Te explico cómo funcionaría en tu negocio concreto en 15 minutos.
           </p>
         </div>
@@ -21,7 +34,24 @@ export default function Contact() {
         <div className="fade-in delay-1">
           <a
             href="mailto:info@fluxoapp.es"
-            className="inline-flex items-center justify-center gap-3 bg-blue-700 hover:bg-blue-600 text-white font-bold text-xl px-10 py-5 rounded-2xl transition-all duration-200 shadow-xl shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5"
+            style={{
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 12,
+              background: '#6C3FC7', color: '#fff',
+              fontFamily: "'Inter', sans-serif", fontSize: 18, fontWeight: 700,
+              padding: '18px 40px', borderRadius: 16, textDecoration: 'none',
+              boxShadow: '0 8px 40px rgba(108,63,199,0.35)',
+              transition: 'all 0.25s cubic-bezier(0.16,1,0.3,1)',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = '#5330A0'
+              e.currentTarget.style.transform = 'translateY(-2px)'
+              e.currentTarget.style.boxShadow = '0 12px 48px rgba(108,63,199,0.5)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = '#6C3FC7'
+              e.currentTarget.style.transform = 'translateY(0)'
+              e.currentTarget.style.boxShadow = '0 8px 40px rgba(108,63,199,0.35)'
+            }}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -31,7 +61,10 @@ export default function Contact() {
           </a>
         </div>
 
-        <p className="fade-in delay-2 mt-8 text-slate-400 text-sm">
+        <p className="fade-in delay-2" style={{
+          fontFamily: "'Inter', sans-serif",
+          fontSize: 14, color: '#C8C4BC', marginTop: 28,
+        }}>
           Soy Enric, estoy en Rubí. Atiendo personalmente.
         </p>
       </div>

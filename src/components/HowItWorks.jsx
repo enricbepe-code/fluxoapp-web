@@ -22,40 +22,95 @@ export default function HowItWorks() {
   const ref = useFadeIn()
 
   return (
-    <section ref={ref} id="como-funciona" className="py-20 sm:py-28 bg-gradient-to-br from-blue-950 to-slate-900 px-4">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-14 fade-in">
-          <span className="inline-block text-blue-400 font-semibold text-sm uppercase tracking-widest mb-3">
+    <section ref={ref} id="como-funciona" style={{
+      padding: '5rem 1rem',
+      background: 'linear-gradient(135deg, #1A1A2E 0%, #252540 100%)',
+      position: 'relative', overflow: 'hidden',
+    }}>
+      {/* Accent dot top-right */}
+      <div aria-hidden="true" style={{
+        position: 'absolute', top: '-4rem', right: '-4rem',
+        width: 320, height: 320, borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(108,63,199,0.3), transparent 70%)',
+        filter: 'blur(40px)',
+      }} />
+
+      <div style={{ maxWidth: 1120, margin: '0 auto', position: 'relative' }}>
+        <div className="fade-in" style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+          <span style={{
+            display: 'block', marginBottom: 12,
+            fontFamily: "'Inter', sans-serif", fontSize: 12,
+            fontWeight: 600, letterSpacing: '0.12em',
+            textTransform: 'uppercase', color: '#A78BFA',
+          }}>
             Proceso
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 style={{
+            fontFamily: "'Syne', sans-serif",
+            fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
+            fontWeight: 800, lineHeight: 1.1,
+            letterSpacing: '-0.02em',
+            color: '#ffffff', margin: 0,
+          }}>
             Así de fácil
           </h2>
         </div>
 
-        <div className="relative">
-          {/* Connector line – desktop only */}
-          <div
-            className="hidden sm:block absolute top-10 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-0.5 bg-blue-800"
-            aria-hidden="true"
-          />
+        <div style={{ position: 'relative' }}>
+          {/* Connector line — visible on desktop */}
+          <div aria-hidden="true" style={{
+            display: 'none',
+            position: 'absolute', top: 40,
+            left: 'calc(16.67% + 2.5rem)', right: 'calc(16.67% + 2.5rem)',
+            height: 1,
+            background: 'linear-gradient(90deg, rgba(108,63,199,0.6), rgba(245,200,66,0.4), rgba(108,63,199,0.6))',
+          }} className="connector-line" />
 
-          <div className="grid gap-8 sm:grid-cols-3 relative">
+          <div style={{ display: 'grid', gap: 40, gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}>
             {steps.map((step, i) => (
               <div
                 key={i}
-                className={`fade-in delay-${i + 1} flex flex-col items-center text-center`}
+                className={`fade-in delay-${i + 1}`}
+                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}
               >
-                <div className="relative w-20 h-20 flex items-center justify-center rounded-full bg-blue-700 border-4 border-blue-900 mb-6 z-10">
-                  <span className="text-2xl font-extrabold text-white">{step.num}</span>
+                <div style={{
+                  width: 80, height: 80, borderRadius: '50%',
+                  background: '#6C3FC7',
+                  border: '3px solid rgba(108,63,199,0.3)',
+                  boxShadow: '0 0 0 6px rgba(108,63,199,0.1), 0 8px 32px rgba(108,63,199,0.4)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  marginBottom: 24, position: 'relative', zIndex: 1,
+                }}>
+                  <span style={{
+                    fontFamily: "'Syne', sans-serif",
+                    fontSize: 28, fontWeight: 800, color: '#ffffff',
+                  }}>
+                    {step.num}
+                  </span>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
+                <h3 style={{
+                  fontFamily: "'Syne', sans-serif", fontSize: 18, fontWeight: 700,
+                  color: '#ffffff', margin: '0 0 12px', lineHeight: 1.25,
+                }}>
+                  {step.title}
+                </h3>
+                <p style={{
+                  fontFamily: "'Inter', sans-serif", fontSize: 15,
+                  lineHeight: 1.65, color: 'rgba(255,255,255,0.5)', margin: 0,
+                }}>
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (min-width: 640px) {
+          .connector-line { display: block !important; }
+        }
+      `}</style>
     </section>
   )
 }
